@@ -1,0 +1,39 @@
+<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+    <h2 class="text-center text-primary">Employee Registration</h2>
+    <hr>
+    <div class="mb-3">
+        <input type="text" 
+            class="form-control" 
+            name="username" 
+            required
+            [(ngModel)]="model.firstName" 
+            placeholder="First Name">
+    </div>
+
+    <div class="mb-3">
+        <input type="text" 
+            class="form-control" 
+            name="lastName" 
+            required
+            [(ngModel)]="model.lastName" 
+            placeholder="Last Name">
+    </div>
+    <div class="mb-3">
+        <input type="email" 
+            class="form-control" 
+            name="email" 
+            [(ngModel)]="model.email" 
+            placeholder="Email">
+    </div>
+    <div class="mb-3">
+        <input type="text" 
+            class="form-control" 
+            name="phone" 
+            [(ngModel)]="model.phone" 
+            placeholder="Phone">
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-success me-2" type="submit">Register</button>
+        <!-- <button class="btn btn-default me-2" (click)="cancel()" type="button">Cancel</button> -->
+    </div>
+</form>
